@@ -1,0 +1,24 @@
+#div1{
+    width: 500px;
+    margin-bottom: 30px;
+    height: 130px;
+}
+p{
+   
+}
+legend{
+    color: red;
+}
+#div2{
+    width: 500px;
+    height: 100px;;
+}
+#p2{
+    margin-top: -12px;
+}
+#p1{
+    margin-top: 5px;
+}
+button{
+    margin-left: 5px;
+}
