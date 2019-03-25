@@ -75,20 +75,26 @@
         }
         var sign="《HTML+CSS3从入门到精通》电脑华为手机面包";
         function work(){
-            var txt=document.getElementById("text").value;   
-            if(sign.indexOf(txt)>=0){
-                alert("您输入的商品以查询过");
+            var txt=document.getElementById("text").value;
+            if(txt==""){
+                alert("输入为空");
             }
-            else if(sign.indexOf(txt)==-1){
-                var e = Math.random().toString(36).substr(2);
-                localStorage.setItem(e,txt);
-                var a;
-                a =document.createElement("p");
-                a.innerText= localStorage.getItem(e);
-                var node=document.getElementById("z");
-                node.appendChild(a);
-                sign +=txt; 
-            }  
+            else{
+                if(sign.indexOf(txt)>=0){
+                    alert("您输入的商品以查询过");
+                }
+                else if(sign.indexOf(txt)==-1){
+                    var e = Math.random().toString(36).substr(2);
+                    localStorage.setItem(e,txt);
+                    var a;
+                    a =document.createElement("p");
+                    a.innerText= localStorage.getItem(e);
+                    var node=document.getElementById("z");
+                    node.appendChild(a);
+                    sign +=txt; 
+                } 
+            }   
+             
         }           
         function delete1(){
             localStorage.clear( )
