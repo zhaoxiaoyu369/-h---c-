@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #text{
+            margin-left: 20px;
+            width: 200px;
+            height: 50px;
+            border: 2px solid rgb(236, 187, 97);
+        }
+        #bt{
+            border: 1 solid rgb(236, 221, 221);
+            width: 150px;
+            height: 40px;
+            color: rgb(163, 159, 159);
+            margin-top: 15px;
+            background-color: rgb(236, 221, 221);
+            
+        }
+        #z{
+            width: 400px;
+            float: left;
+        }
+        #bt2{
+            width: 25px;
+            height: 25px;
+            border: 1 solid rgb(233, 231, 231);
+            background-color: rgb(236, 221, 221);
+            color:white;
+            float: left;
+            position:absolute;
+            margin-left:400px; 
+        }
+        .zx p{
+            margin-left: 20px;
+            float: left;
+            background-color:  rgb(184, 176, 176);    
+        }
+        #zz{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="请输入想查询的商品" id="text">
+    <input type="button" name="搜索" id="bt" value="搜索" onclick="work()">
+    
+    <p id="zz">最近搜索</p>
+    <div id="z" class="zx">
+        <p id="z1">《HTML+CSS3从入门到精通》</p>
+        <p id="z2">电脑</p> 
+        <p id="z3">华为手机</p>
+        <p id="z4">面包</p>   
+    
+    </div>
+    <input type="button" name="搜索" id="bt2" value="X" onclick="delete1()">
+    <script>
+        window.onload=function a(){
+            var q =document.getElementById("z1").innerText;
+            var z= "sk_1";
+            localStorage.setItem(z,q) 
+            var w =document.getElementById("z2").innerText;
+            var c= "sk_2";
+            localStorage.setItem(c,w) 
+            var r =document.getElementById("z3").innerText;
+            var v = "sk_3";
+            localStorage.setItem(v,r) 
+            var t =document.getElementById("z4").innerText;
+            var b= "sk_4";
+            localStorage.setItem(b,t)    
+        }
+        var sign="《HTML+CSS3从入门到精通》电脑华为手机面包";
+        function work(){
+            var txt=document.getElementById("text").value;   
+            if(sign.indexOf(txt)>=0){
+                alert("您输入的商品以查询过");
+            }
+            else if(sign.indexOf(txt)==-1){
+                var e = Math.random().toString(36).substr(2);
+                localStorage.setItem(e,txt);
+                var a;
+                a =document.createElement("p");
+                a.innerText= localStorage.getItem(e);
+                var node=document.getElementById("z");
+                node.appendChild(a);
+                sign +=txt; 
+            }  
+        }           
+        function delete1(){
+            localStorage.clear( )
+            document.getElementById("z").innerHTML="";
+            document.getElementById("zz").innerText="当前存储为空";
+
+        } 
+    </script>
+</body>
+</html>
