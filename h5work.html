@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>刮奖效果</title>
+    <style>
+		canvas{
+            position: absolute;
+            background: url(zailai.jpg)no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="400px" height="200px" >
+    </canvas>
+    <script>
+        var canvas=document.getElementById("canvas");
+        var cxt=canvas.getContext('2d');
+        cxt.beginPath();
+        cxt.fillStyle='gray';
+		cxt.fillRect(0,0,400,200);
+		canvas.onmousedown=function(){
+            canvas.onmousemove=function(){
+                cxt.globalCompositeOperation='destination-out';
+                cxt.beginPath();
+                cxt.arc(event.clientX,event.clientY,25,0,2*Math.PI);
+                cxt.fill();
+                judge();
+            }
+            function judge(){
+                var backg=0;
+                var imgData=cxt.getImageData(0,0,400,200);
+                for(var i=0;i<imgData.data.length;i+=4){
+                    if(imgData.data[i]==0){
+                        backg++;
+                    }
+                    if(backg==0.85*200*400){
+                        cxt.clearRect(0,0,400,200);
+                    }
+                }
+            }
+        }
+		canvas.onmouseup=function(){
+                canvas.onmousemove=function(){
+                }
+            }
+    </script>
+</body>
+</html>
