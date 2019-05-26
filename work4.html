@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>work04</title>
+    <style>
+        #animation{
+            width: 400px;
+            height: 450px;
+            position: relative;
+            background: #fff;
+            box-shadow: 2px 2px 5px grey;
+            overflow: hidden;
+        }
+        #time{
+            width: 50px;
+            height: 50px;
+            border: 1px solid rgb(243, 132, 27);
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1000;
+            top: 20px;
+            right: 20px;
+            background: rgb(245, 131, 24);
+            color: #fff;
+            text-align: center;
+        }
+        #time p{
+            line-height: 0px;
+        }
+        #shadow{
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: black;
+            opacity: 0;
+            z-index: 998;
+        }
+        #display{
+            width: 400px;
+            height: 250px;
+            overflow: hidden;
+        }
+        #move{
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            overflow: hidden;
+            top: 225px;
+            z-index: 999;
+        }
+        #photo{
+            width: 60px;
+            height: 25px;
+            background: rgb(245, 131, 24);
+            color: #fff;
+            font-size: 15px;
+            text-align: center;
+        }
+        #text{
+            width: 400px;
+            height: 170px;
+            background: #fff;
+        }
+        #text1{
+            padding-top: 5px;
+            margin-top: 1px;
+            margin-left: 20px;
+            line-height: 25px;
+        }
+        #text1 p{
+            font-weight: bold;
+            font-size: 22px;
+        }
+        #text1 span{
+            color: rgb(245, 131, 24);
+            font-size: 20px;
+        }
+        #text2{
+            margin: -10px 0px 0 20px;
+            opacity: 0;
+            background: #fff;
+        }
+        #text2 p{
+            padding-right: 40px;
+            font-size: 16px;
+            color: rgb(12, 11, 71);
+        }
+        #introduce{
+            width: 340px;
+            height: 30px;
+            padding: 10px 0 0 30px;
+            position: absolute;
+            bottom: 1px;
+            background: #fff;
+            font-size: 13px;
+            color: rgb(156, 154, 154);
+        }
+        #animation:hover #shadow{
+            background-color: #000;
+            opacity: 0.3;
+        }
+        #animation:hover #display{
+            width: 400px;
+            transform: scale(1.2);
+            transition: transform 1s ease-in-out;
+        }
+        #animation:hover #move{
+            transform: translateY(-70px);
+            transition: transform 1s ease-in-out;
+        }
+        #animation:hover #text2{
+            animation: move 1s 0.5s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes move{
+            0% {
+                opacity: 0;
+            } 100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="animation">
+        <div id="time"><p>17</p><p>7月</p></div>
+            <div id="shadow"></div>
+            <img id="display" src="zhanqiao.jpg">
+        <div id="move">
+            <div id="photo">照片</div>
+            <div id="text">
+                <div id="text1">
+                    <p>青岛栈桥</p>
+                    <span>国家AAAA级旅游景区</span>
+                </div>
+                <div id="text2">
+                    <p>青岛栈桥是青岛海滨风景区的景点之一，是国务院于1982年首批公布的国家级风景名胜区，也是首批国家AAAA级旅游景区。青岛栈桥位于游人如织的青岛中山路南端，桥身从海岸探入如弯月般的青岛湾深处。桥身供游人参观并在此停靠旅游船，由此乘船可看海上青岛。</p>
+                </div>
+            </div>
+        </div>
+        <div id="introduce">照片拍摄于青岛栈桥  2017年7月26日</div>
+    </div>
+</body>
+</html>
+
