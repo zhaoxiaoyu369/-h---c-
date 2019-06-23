@@ -1,15 +1,16 @@
 body{
     background-color: #eee;
 }
+.row{
+    margin: 0;
+}
 a{
     text-decoration: none;
 }
 ul li{
     list-style: none;
 }
-
-
-/* nav */
+/* nav 导航 */
 
 @media (min-width: 1200px){
     .container{
@@ -28,6 +29,24 @@ ul li{
     .navbar-fixed-top{
         top: 35px;
     }
+    .navbar-nav>li {
+        border-bottom: 3px solid inherit;
+    }
+    .navbar-default .navbar-nav>li>a:focus,
+    .navbar-default .navbar-nav>li>a:hover {
+        border-bottom: 3px solid rgb(235, 82, 35)
+    } 
+    .navbar-default .navbar-nav>.active>a,
+    .navbar-default .navbar-nav>.active>a:focus,
+    .navbar-default .navbar-nav>.active>a:hover {
+        color: rgb(235, 82, 35);
+        background: none;
+        border-bottom: 3px solid rgb(235, 82, 35)
+    }
+    .navbarbig{
+        width: 1200px;
+        margin: 0 auto;
+    }
 }
 @media (max-width: 1199px){
     .container{
@@ -37,8 +56,6 @@ ul li{
     }
     .context{
         margin: 0 auto;
-        padding-right: 15px;
-        padding-left: 15px;
     }
     nav{
         background: #eee;
@@ -46,32 +63,32 @@ ul li{
     }
 }
 
-/* backfix */
-.bigblackfix{
+/* top */
+.top{
     width: 100%;
     height: 35px;
     background: #333;
     position: fixed;
     z-index: 1030;
 }
-.blackfix{
+.blacktop{
     margin: 0 auto;
     width: 1200px;
     height: 35px;
 }
-.blackfix>ul{
+.blacktop>ul{
     float: right;
     margin-left: 10px;
     list-style: none;
     line-height: 35px;
 }
-.blackfix>ul>li{
+.blacktop>ul>li{
     color: #fff;
     float: left;
     margin: 0 7px;
     cursor: pointer;
 }
-.blackfix>a{
+.blacktop>a{
     float: right;
     padding-top: 2px;
     font-size: 20px;
@@ -93,7 +110,6 @@ ul li{
 .navbar-nav>li {
     font-size: 20px;
     margin: 0 10px;
-    border-bottom: 3px solid inherit;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -111,7 +127,6 @@ ul li{
 .navbar-default .navbar-nav>li>a:hover {
     color: rgb(235, 82, 35);
     background-color: none;
-    border-bottom: 3px solid rgb(235, 82, 35)
 }
 
 .navbar-default .navbar-nav>.active>a,
@@ -119,7 +134,6 @@ ul li{
 .navbar-default .navbar-nav>.active>a:hover {
     color: rgb(235, 82, 35);
     background: none;
-    border-bottom: 3px solid rgb(235, 82, 35)
 }
 
 .navbar-brand {
@@ -142,7 +156,7 @@ ul li{
 
 /* banner */
 @media (min-width: 1200px){
-    #ban{
+    #Broadcast{
         width: 100%;
         height: 450px;
         overflow: hidden;
@@ -173,7 +187,7 @@ ul li{
     }
 }
 @media (max-width: 1199px){
-    #ban{
+    #Broadcast{
         margin-top: 55px;
         height: 250px;
         overflow: hidden;
@@ -315,6 +329,625 @@ ul li{
 	background: #da3802;
 }
 
+/*feature*/
+@media (min-width: 1200px){
+    #fea{
+        display: none;
+    }
+    #feb{
+        display: block;
+    }
+}
+@media (max-width: 1199px){
+    #fea{
+        display: block;
+    }
+    #feb{
+        display: none;
+    }
+}
+/* featurea */
+.featurea{
+    width: 100%;
+    height: 130px;
+    padding: 0 5%;
+    margin-top: 10px;
+    background-color: #fff;
+    position: relative;
+}
+.feaa{
+    width: 25%;
+    height: 100%;
+    float: left;
+    
+}
+.feaa>img{
+    width: 80%;
+    max-width: 90px;
+    position: relative;
+    top: 25%;
+}
+.feab{
+    width: 75%;
+    height: 100%;
+    float: right;
+    padding-top: 5%;
+}
+.feab>h3{
+    font-size: 15px;
+}
+.feab>p{
+    font-size: 10px;
+}
+.feac{
+    width: 25%;
+    height: 25%;
+    border: 1px solid #333;
+    border-radius: 5px;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    right: 5%;;
+}
+.feac>a{
+    font-size: 100%;
+    line-height: 200%;
+    text-decoration: none;
+}
+
+
+/* featureb */
+.featureb{
+	width: 1200px;
+	height: 365px;
+	margin-top: 20px;
+	border-radius: 5px;
+	display: block;
+	background: url(../img/Sbanner2.jpg) no-repeat;
+}
+.feba{
+	width: 300px;
+	height: 365px;
+	float: right;
+	background: #1c5080;
+	margin: 0 auto;
+	display: block;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.feba
+.febaa{
+	width: 130px;
+	height: 155px;
+	margin-top: 75px;
+	margin-left: 85px;
+	text-align: center;
+}
+.febaa p{
+	font-size: 27px;
+    color: #fff;
+}
+.febab{
+	width: 180px;
+	height: 50px;
+	margin-top: 15px;
+	margin-left: 60px;
+	text-align: center;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	display: block;
+}
+.febab:hover{
+	border-color: #e8420a;
+    cursor: pointer;
+}
+.febab p{
+	font-size: 24px;
+	color: #fff;
+	padding-top: 5px;
+}
+.febab a{
+    color: #fff;
+    text-decoration: none;
+}
+.febac{
+	width: 55px;
+	height: 55px;
+	float: right;
+	margin-top: 11px;
+}
+.febb{
+	width: 335px;
+	height: 120px;
+	float: right;
+	margin-top: 15px;
+	margin-right: 35px;
+}
+.febba{
+	font-size: 36px;
+	color: #fff;
+	padding: 10px 0;
+}
+.febbb{
+	font-size: 18px;
+	color: #fff;
+	line-height: 30px;
+}
+
+/* Popular */
+@media (min-width: 1199px){
+    #Popular{
+        width: 100%;
+        padding: 0;
+    }
+    #rouap{
+        height: 60px;
+        display: block;
+        text-align: center;
+        margin: 45px auto;
+    }
+    #rouam{
+        display: none;
+    }
+    .rouba{
+        width: 99%;
+        height: 437px;
+        position: relative;
+    }
+    #roubam{
+        display: none;
+    }
+    #roubap{
+        display: block;
+    }
+    #roubtn{
+        display: none;
+    }
+}
+@media (max-width: 1200px){
+    #Popular{
+        width: 100%;
+        padding: 0 5%;
+        margin-top: 10px;
+        background-color: #fff;
+    }
+    #rouap{
+        display: none;
+    }
+    #rouam{
+        display: block;
+    }
+    .rouba{
+        width: 100%;
+        height: 280px;
+    }
+    #roubam{
+        display: block;
+    }
+    #roubap{
+        display: none;
+    }
+    #roub>.col-md-6:last-child{
+        display: none;
+    }
+    #roubtn{
+        display: block;
+    }
+}
+#roub{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#rouam{
+    margin-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid #dfdfdf;
+}
+#rouam span{
+    font-weight: bolder;
+    color: #e8420a;
+    margin-right: 2%;
+}
+#roubtn{
+    width: 30%;
+    height: 30px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    color: #808080;
+    text-align: center;
+    line-height: 200%;
+    margin: 20px auto;
+}
+#roub>div{
+    padding: 0;
+}
+.rouba{
+    margin-bottom: 4px;
+}
+.rouba>img{
+    width: 100%;
+    max-height: 80%;
+}
+#roubap{
+    width: 100%;
+    height: 20%;
+    background: #000;
+    color: #fff;
+}
+#roubap>h4{
+    margin: 0;
+    padding: 0;
+    line-height: 200%;
+    margin-left: 10%;
+    position: relative;
+    top: 10%
+}
+#roubap>h4>span{
+    font-size: 30px;
+    margin: 0 10px;
+}
+#roubam{
+    width: 100%;
+    height: 20%;
+    background: #000;
+    color: #fff;
+}
+#roubam h5{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    line-height: 200%;
+    margin-left: 5%;
+    float: left;
+}
+#roubam>h5>span{
+    font-size: 20px;
+    margin: 0 10px;
+}
+.roubb{
+    height: 290px;
+    margin-bottom: 4px;
+    position: relative;
+}
+.roubb>div{
+    height: 25%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+.roubb>div>h4{
+    margin: 0;
+    padding: 0;
+    line-height: 200%;
+    margin-left: 10%;
+}
+.roubb span{
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+/* visa */
+@media (min-width: 1200px){
+    #visa>.row>.col-md-4{
+        display: block;
+    }
+    #visa{
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    #visa>#rouap{
+        height: 100px;
+    }
+    #visa>.row{
+        height: 550px;
+    }
+    .visaba>img{
+        width: 100%;
+    }
+    .visaba>div{
+        height: 20%;
+    }
+    .visaba>div>a, .visabb>div>a{
+        font-size: 23px;
+        margin-left: 10%;
+    }
+    .visaba>div>a>span{
+        font-size: 40px;
+    }
+    .visabb>div{
+        height: 30%;
+    }
+    #visa>#roubtn{
+        display: block;
+        height: 45px;
+        width: 15%;
+        margin: 50px auto;
+        font-size: 20px;
+    }
+    #Bban{
+        display: block;
+    }
+}
+@media (max-width: 1199px){
+    #visa>.row>.col-md-4{
+        display: none;
+    }
+    #visa>.row>.col-md-8{
+        display: block;
+    }
+    #visa{
+        width: 100%;
+        padding: 0 5%;
+        margin-top: 10px;
+        background-color: #fff;
+    }
+    #visa>.row{
+        height: 200px;
+    }
+    .visaba>img{
+        height: 100%;
+    }
+    .visaba>div{
+        height: 20%;
+    }
+    .visabb>div{
+        height: 40%;
+    }
+    .visaba>div>a, .visabb>div>a{
+        font-size: 10px;
+        margin-left: 5%;
+    }
+    .visabb>div>a>span{
+        font-size: 15px;
+        margin: 0 2%;
+    }
+    #Bban{
+        display: none;
+    }
+}
+#visa>#rouap>ul{
+    height: 25px;
+    width: 40%;
+    list-style: none;
+    margin: 15px auto 0 auto;
+}
+#visa>#rouap>ul>li{
+    float: left;
+    margin: 0 2%;
+}
+#visa>.row{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#visa>.row>.col-md-8{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+#visa>.row>.col-md-8>.col-md-6{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+#visa>.row>.col-md-4{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.vidaba{
+    height: 100%;
+}
+.visaba{
+    width: 99%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 1%;
+    background-size: 100%;
+    background-position: 50%;
+    overflow: hidden;
+}
+.visaba>div{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.visaba>div>a{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    top: 20%;
+}
+.visaba>div>a>span{
+    margin: 0 2%;
+}
+.visabb{
+    width: 99%;
+    height: 49.5%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    position: relative;
+    overflow: hidden;
+}
+.visabb>img{
+    width: 100%;;
+}
+.visabb>div{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.visabb>div>a{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    top: 30%;
+    margin-left: 10%;
+}
+.visabb>div>a>span{
+    margin: 0 2%;
+}
+
+/* Bban */
+#Bban{
+    width: 100%;
+}
+
+/* view */
+@media (min-width: 1199px){
+    #view{
+        width: 100%;
+        background: url(../img/back.png) no-repeat;
+        background-size: 100%;
+    }
+    #viewa{
+        background-color: #1c5080;
+    }
+    #view>#rouap{
+        margin-top: 120px;
+    }
+    #viewa>.col-md-5, #viewa>.col-md-7{
+        color: #fff;
+    }
+    #viewa>.col-md-7>h2{
+        text-align: center;
+        margin-top: 12%;
+    }
+    #viewa>.col-md-7>p{
+        width: 70%;
+        margin: 0 auto;
+        font-size: 17px;
+        margin-top: 5%;
+        text-align: justify;
+    }
+    #viahp{
+        display: block;
+    }
+    #viahm{
+        display: none;
+    }
+    #viewb{
+        margin-top: 5px;
+    }
+    #viewc{
+        height: 400px;
+        width: 100%;
+        background: #1c5080;
+        color: #fff;
+    }
+    #viewcbig{
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #viewca{
+        height: 100%;
+        position: relative;
+        top: 15%;
+    }
+    #viewca>div{
+        height: 50%;
+        background-repeat: no-repeat;
+        background-position: 50%, 50% 40%;
+    }
+    #viewca>div>p{
+        font-size: 20px;
+        position: relative;
+        top: 65%;
+        display: block;
+    }
+    #viewca>img{
+        display: none;
+    }
+    #viewca>p{
+        word-break: keep-all;
+        padding-top: 5%;
+        font-size: 15px;
+        line-height: 200%;
+    }
+}
+@media (max-width: 1200px){
+    #view{
+        width: 100%;
+        padding: 0 5%;
+        background-color: #fff;
+        background-image: url(img/back.png);
+        background-size: 100%;
+        background-position: -20px 55px;
+        background-repeat: no-repeat;
+        margin-top: 10px;
+    }
+    #view img{
+        width: 100%;
+    }
+    #t2{
+        margin-top: -100px;
+    }
+    #viewa>.col-md-5, #viewa>.col-md-7{
+        color: #000;
+    }
+    #viewa>div:first-child{
+        height: 200px;
+        overflow: hidden;
+    }
+    #viahp{
+        display: none;
+    }
+    #viahm{
+        display: block;
+        margin: 35px auto 15px auto;
+        text-align: center;
+    }
+    #viewa>div:last-child>p{
+        font-size: 13px;
+        text-align: justify;
+        line-height: 180%;
+    }
+    #viewb{
+        margin-top: 5px;
+    }
+    #viewca{
+        height: 120px;
+        border-bottom: 1px solid #808080;
+    }
+    #viewca>div{
+        display: none;
+    }
+    #viewca>div>p{
+        display: none;
+    }
+    #viewca>img{
+        display: block;
+        width: 15%;
+        position: relative;
+        top: 10%;
+        float: left;
+    }
+    #viewca>p{
+        word-break: keep-all;
+        float: right;
+        width: 70%;
+        position: relative;
+        top: 30%;
+    }
+    #viewca:first-child>p{
+        top: 20%;
+    }
+    #viewca:last-child{
+        margin-bottom: 50px;
+    }
+}
+#viewa>.col-md-5, #viewa>.col-md-7{
+    padding: 0;
+    margin: 0;
+}
 
 /* bottom */
 @media (min-width: 1200px){
